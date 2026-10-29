@@ -45,6 +45,8 @@ html,body{margin:0;background:var(--page);font-family:'Montserrat',ui-sans-serif
 .tile{display:flex;align-items:center;gap:12px;background:var(--tile);color:var(--tile-ink);text-decoration:none;border-radius:8px;min-height:56px;padding:0 18px;margin-bottom:10px;font-size:15px;font-weight:500}
 .tile svg{flex:none;color:var(--accent)}
 .tile span{min-width:0;overflow-wrap:anywhere}
+.map{border-radius:8px;overflow:hidden;background:var(--tile);margin-top:2px}
+.map iframe{display:block;width:100%;height:220px;border:0}
 .foot{text-align:center;margin:36px 18px 0;font-size:12px;opacity:.7}
 .foot a{color:var(--accent);text-decoration:none}
 dialog{border:0;border-radius:16px;padding:24px;background:#fff;color:#0A0C15;max-width:90vw;text-align:center;font-family:inherit}
@@ -93,7 +95,8 @@ dialog button{border:0;background:var(--band);color:#fff;padding:12px 24px;borde
   <div class="section">
     <h2>Singapore</h2>
     <div class="tile"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h12v2H3z"/></svg><span>V Harbour International Pte. Ltd.</span></div>
-    <a class="tile" href="https://www.google.com/maps/search/?api=1&query=[OFFICE ADDRESS]" target="_blank" rel="noopener"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg><span>[OFFICE ADDRESS], Singapore</span></a>
+    <a class="tile" href="https://www.google.com/maps/search/?api=1&query=73%20Circular%20Rd%2C%20%2303-01%2C%20Singapore%20049427" target="_blank" rel="noopener"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg><span>73 Circular Rd, #03-01, Singapore 049427</span></a>
+    <div class="map"><iframe title="Map to V Harbour International, 73 Circular Road" src="https://maps.google.com/maps?q=73%20Circular%20Road%2C%20Singapore%20049427&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
   </div>
 
   <p class="foot"><a href="https://www.v-harbour.com" target="_blank" rel="noopener">www.v-harbour.com</a></p>
@@ -118,7 +121,7 @@ dialog button{border:0;background:var(--band);color:#fff;padding:12px 24px;borde
     'EMAIL;TYPE=INTERNET,WORK:joish@vharbour.com',
     'URL:https://www.v-harbour.com',
     'X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/joishpaul',
-    'ADR;TYPE=WORK:;;[OFFICE ADDRESS];Singapore;;;Singapore',
+    'ADR;TYPE=WORK:;;73 Circular Rd, #03-01;Singapore;;049427;Singapore',
     'END:VCARD'].join('\r\n');
 
   document.getElementById('saveBtn').addEventListener('click', function(){
